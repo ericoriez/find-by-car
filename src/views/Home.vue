@@ -44,27 +44,15 @@
       <p>Chargement des véhicules...</p>
     </div>
     <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div
-          v-for="vehicle in filteredVehicles"
-          :key="vehicle.id"
-          class="p-4 border rounded-lg shadow-md hover:shadow-lg transition"
-      >
+      <div v-for="vehicle in filteredVehicles" :key="vehicle.id" class="p-4 border rounded-lg shadow-md hover:shadow-lg transition">
         <h2 class="text-xl font-semibold mb-2">{{ vehicle.brand }} - {{ vehicle.model }}</h2>
         <p class="text-gray-600">Couleur : {{ vehicle.color }}</p>
         <p class="text-gray-600">Puissance Fiscale : {{ vehicle.fiscalPower }}</p>
         <p class="text-gray-600">Prix de Base : {{ vehicle.basePrice }}€</p>
         <p class="text-gray-600">Prix au km : {{ vehicle.kmPrice }}€</p>
         <p class="text-gray-600">Matricule : {{ vehicle.matriculation }}</p>
-        <img
-            :src="vehicle.image"
-            alt="Image véhicule"
-            class="w-full h-49 object-cover rounded-md mb-4"
-        />
-        <button
-            class="mt-4 w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition"
-        >
-          Voir Détails
-        </button>
+        <img :src="vehicle.image" alt="Image véhicule" class="w-full h-49 object-cover rounded-md mb-4"/>
+        <button class="mt-4 w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">Voir Détails</button>
       </div>
     </div>
   </div>
